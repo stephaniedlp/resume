@@ -41,3 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
   });
+
+  document.addEventListener("DOMContentLoaded",function() {
+    var links = document.querySelectorAll(".rounded-grid-link");
+
+    links.forEach(function(link){
+      var img = link.querySelector("img");
+      //Get the <span> element containing the text inside the <a> element
+      var textSpan = link.querySelector("span");
+      //hide text 
+      textSpan.style.display="none";
+
+      //mouseover event listener to the img element
+      img.addEventListener("mouseover",function(){
+        //show text when hover the img
+        textSpan.style.display = "block";
+      });
+      // mouseout event listener to the <img> element
+      img.addEventListener("mouseout", function(){
+        //hide text when mouse leaves the img
+        textSpan.style.display="none";
+      })
+    })
+  })

@@ -15,6 +15,7 @@
   }
 a {
 	color: inherit;
+    cursor: pointer;
 }
 h1 {
     margin-top: 20px;
@@ -24,11 +25,17 @@ h1 {
     margin-block-end: 0.67em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+    cursor: pointer;
+}
+h1:hover{
+    text-decoration: underline;
+    text-decoration-color: #5b7a58;
+    text-decoration-thickness: 2px;
 }
 h2 {
     margin-top: 20px;
     font-size: 32px;
-    line-height: 36px
+    line-height: 36px;
 }
 html {
     scroll-behavior: smooth;
@@ -46,13 +53,12 @@ body{
     min-height: var(--minheight);
     margin:0;
 }
-div {
-
+section{
+    z-index: 1;
 }
-
 /*#region MENU*/
 .menu {
-    z-index: 900;
+    z-index: 999999999;
     width: 100%;
     color: var(--main-dark);
     text-transform: uppercase;
@@ -82,25 +88,25 @@ div {
 }
 .menu-link {
     text-decoration: none;
-    position: relative
+    position: relative;
 }
 .menu-link.contact {
-    margin-right: 12.3vw
+    margin-right: 12.3vw;
 }
 .menu-link.contact.last {
-    margin-right: 0
+    margin-right: 0;
 }
 .menu-link.all {
-    margin-bottom: 5px
+    margin-bottom: 5px;
 }
 .w-inline-block {
     max-width: 100%;
-    display: inline-block
+    display: inline-block;
 }
 .menu-text {
     z-index: 2;
     transition: transform 1s cubic-bezier(.23,1,.32,1);
-    position: relative
+    position: relative;
 }
 .menu-text.absolute {
     z-index: 1;
@@ -112,13 +118,13 @@ div {
 .menu-text-ofh {
     width: 100%;
     position: relative;
-    overflow: visible
+    overflow: visible;
 }
 .menu-text-ofh-secure {
     width: 100%;
     line-height: 1;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 a.menu-link:hover .menu-text {
     transform: translate(0px, -101%);
@@ -136,18 +142,18 @@ a.menu-link:hover .menu-text.absolute {
 }
 .menu-links-col-list-wrap {
     width: 100%;
-    position: relative
+    position: relative;
 }
 .menu-links-col-list {
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
     display: flex;
-    position: relative
+    position: relative;
 }
 .menu-links-col-item {
     width: 100%;
-    position: relative
+    position: relative;
 }
 .menu-dot-holder {
     width: .575vw;
@@ -156,7 +162,7 @@ a.menu-link:hover .menu-text.absolute {
     position: absolute;
     top: .2vw;
     left: 0;
-    transform: translate(-165%)
+    transform: translate(-165%);
 }
 .menu-dot {
     width: 100%;
@@ -189,7 +195,7 @@ a.menu-link:hover .menu-text.absolute {
     min-height: 100vh;
     flex-direction: column;
     justify-content: space-between;
-    display: flex
+    display: flex;
 }
 .category-h1-holder {
     width: 100%;
@@ -210,6 +216,7 @@ a.menu-link:hover .menu-text.absolute {
 
 /* #endregion MAIN */
 
+/*  #region section content*/
 .product-all-info-holder {
     width: 100%;
     position: relative;
@@ -223,6 +230,7 @@ a.menu-link:hover .menu-text.absolute {
     bottom: 2.5vw;
     left: 2.2vw;
     overflow: visible;
+    cursor:
 }
 .product-page-year-ofh {
     height: 100%;
@@ -256,6 +264,9 @@ a.menu-link:hover .menu-text.absolute {
     transform: translate3d(0px, 0px, 0px) scale3d(0.6312, 0.6312, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); 
     transform-style: preserve-3d;
 }
+.product-page-year-dot:active{
+    opacity: 1;
+}
 .product-page-year-dot.dark {
     background-color: var(--main-dark);
 }
@@ -266,7 +277,7 @@ a.menu-link:hover .menu-text.absolute {
     display: flex;
     position: relative;
 }
-
+/*  #endregion section content*/
 /* #region Section about content*/
 
 .about-text-holder {
@@ -285,11 +296,11 @@ a.menu-link:hover .menu-text.absolute {
     position: relative;
 }
 .para p {
-    margin-bottom: 3vw
+    margin-bottom: 3vw;
 }
 
 .para a {
-    color: #5a5a5a
+    color: #5a5a5a;
 }
 /* #endregion Section about content*/
 
@@ -309,33 +320,38 @@ a.menu-link:hover .menu-text.absolute {
     padding-top: .5vw;
     
     padding-bottom: .5vw;
-    position: relative
+    position: relative;
 }
 
 .product-grid-col-list {
     width: 100%;
     justify-content: space-between;
-    align-items: center;
-    padding-left: 0;
-    padding-right: 0;
+    align-items: flex-start;
+
     display: flex;
-    padding-top: 3vw;
-    position: relative
+    padding: 3vw 0 3vw 0;
+    position: relative;
 }
 
 .product-grid-col-item {
-    width: 100%;
+    width:fit-content;
+    margin: 1vw;
     position: relative;
     overflow: hidden;
+
 }
+
 .product-grid-col-item a {
     text-decoration: none;
     text-align: center;
 
 }
 
+
 .product-grid-col-item:nth-child(2n+0){
-    width: 30%;
+    width: 60%;
+    padding-top: 0vw;
+
 }
 .product-grid-col-item:nth-child(3n+0) {
     width: calc(60% - 0.55vw);
@@ -352,8 +368,11 @@ a.menu-link:hover .menu-text.absolute {
     transform: none;
 }
 img {
-    max-width: 100%;
-    display: inline-block;
+    transition: .3s ease-in-out;
+
+
+    
+    box-shadow:  hsla(0, 0%, 75%, 0.694);
 }
 img:hover{
     opacity: 80%;
@@ -374,25 +393,12 @@ img:hover{
 
 .card-list {
     display: flex;
-    padding: 3rem;
-    overflow-x: scroll;
+    padding: 2rem;
+    margin: 2rem 0 2rem 0;
     font-family: TimesNowSemiLight-75, TimesNowSemiLight,serif;
 }
 
 
-.card-list::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-.card-list::-webkit-scrollbar-thumb {
-    background: #5a5a5a;
-    border-radius: 10px;
-    box-shadow: inset 2px 2px 2px hsla(0,0%,100%,.25), inset -2px -2px 2px rgba(252, 252, 252, 0.694);
-}
-
-.card-list::-webkit-scrollbar-track {
-    background: linear-gradient(90deg,#847f90,#847f90 1px,#939195 0,#939195);
-}
 
 
 .card {
@@ -400,7 +406,7 @@ img:hover{
     position: relative;
     flex-direction: column;
     height: 350px;
-    width: 400px;
+    width: 100%;
     min-width: 250px;
     padding: 1.5rem;
 }
@@ -428,7 +434,7 @@ img:hover{
 }
 
 .card-header {
-    margin-bottom: auto;
+    width: fit-content;
 }
 
 .card-header p {
@@ -456,7 +462,7 @@ img:hover{
     display: grid;
     grid-template-columns: 130px 1fr;
     align-items: center;
-    margin: 3rem 0 0rem;
+    margin: 0rem 0 0rem;
 }
 
 .author-avatar img {
@@ -552,23 +558,23 @@ transform: translate(0%, 0%);}
         padding-top: 4vw;
         padding-left: 3vw;
         padding-right: 3vw;
-        font-size: 3.25vw
+        font-size: 3.25vw;
     }
 
     .menu-link.contact {
         margin-bottom: 5px;
-        margin-right: 2vw
+        margin-right: 2vw;
     }
 
     .menu-link.all {
-        margin-bottom: .5vw
+        margin-bottom: .5vw;
     }
     .category-h1-holder{
         font-size: 12vw;
     }
     .para{
         max-width: none;
-        font-size: 3.25vw
+        font-size: 3.25vw;
     }
 }
 
@@ -601,11 +607,11 @@ footer {
     text-transform: lowercase;
     margin-top: 0;
     text-decoration: none;
-    position: relative
+    position: relative;
 }
 
 .footer-link.social {
-    margin-right: 8.9vw
+    margin-right: 8.9vw;
 }
 .under-footer-text-title {
     width: 100%;
@@ -623,15 +629,15 @@ footer {
 }
 .footer-srs span.word {
     position: relative;
-opacity: 1;
-transform-style: preserve-3d;
-transform-origin: left;
-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
--webkit-transform: translate(0%, 20%);
--ms-transform: translate(0%, 20%);
-transform: translate(0%, 20%);
-padding-bottom: 1vw;
-margin-bottom: -1vw;
+    opacity: 1;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    -webkit-transform: translate(0%, 20%);
+    -ms-transform: translate(0%, 20%);
+    transform: translate(0%, 20%);
+    padding-bottom: 1vw;
+    margin-bottom: -1vw;
 }
 .footer-srs.is-inview span.word {
     animation: revealproducth1 2s cubic-bezier(.23, 1, .32, 1) forwards;
@@ -663,11 +669,11 @@ footer p {
     bottom: 0%;
     left: 0%;
     right: 0%;
-    transform: scale(0)
+    transform: scale(0);
 }
 
 .find-us-dot.dark {
-    background-color: #0e0e0e
+    background-color: #0e0e0e;
 }
 
 .find-us-dot-holder {
@@ -676,14 +682,14 @@ footer p {
     background-color: transparent;
     position: absolute;
     top: .4vw;
-    transform: translate(-165%)
+    transform: translate(-165%);
 }
 
 .google-maps-link-text-ofh {
     margin-top: .15vw;
     line-height: 1;
     position: relative;
-    overflow: hidden
+    overflow: hidden;
 }
 
 
