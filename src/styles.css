@@ -8,11 +8,19 @@
     --font-title: 9vw;
 }
 
+/* Reset y configuración base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 a {
     color: inherit;
     cursor: pointer;
+    text-decoration: none;
 }
+
 
 h1 {
     font-family: var(--font-family);
