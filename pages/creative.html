@@ -8,6 +8,8 @@
   <title>Creative · Stephanie De La Puente Jouanne</title>
   <link rel="stylesheet" href="/src/styles.css">
   <link rel="stylesheet" href="/src/footer.css">
+  <script src="/js/render.js" defer></script>
+  <script src="/js/data.js" defer></script>
   <script src="/js/components.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
@@ -16,7 +18,7 @@
 
   <div class="menu dark"></div>
 
-  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-eyebrow">
       <span>photography</span>
@@ -25,9 +27,7 @@
       <span class="eyebrow-sep">·</span>
       <span>visual storytelling</span>
     </div>
-
     <h1 class="hero-title">creative.</h1>
-
     <div class="hero-bottom">
       <p class="hero-description">
         The other half of the equation — finding beauty,<br>
@@ -37,113 +37,18 @@
     </div>
   </section>
 
-  <!-- ─── PHOTOGRAPHY ───────────────────────────────────────────── -->
+  <!-- PHOTOGRAPHY -->
   <section id="photography" class="section">
     <div class="section-inner">
       <div class="section-head">
         <span class="section-label">photography</span>
         <h2 class="section-title">Through the lens.</h2>
       </div>
-
-      <div class="gallery">
-
-        <div class="gallery-category">
-          <p class="gallery-label">Hotel · Interior · Marsella</p>
-          <div class="gallery-grid">
-            <div class="gallery-item" data-src="/img/banio/baniouno.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniouno.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/baniodos.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniodos.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/baniotres.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniotres.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/baniocuatro.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniocuatro.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/baniocinco.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniocinco.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/banioseis.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/banioseis.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/banio/baniosiete.jpg" data-caption="Marsella Hotel Boutique">
-              <img src="/img/banio/baniosiete.jpg" alt="Marsella Hotel Boutique" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-category">
-          <p class="gallery-label">Travel · Coast · Nayarit & Oaxaca</p>
-          <div class="gallery-grid">
-            <div class="gallery-item" data-src="/img/playa/pi1.jpg" data-caption="Punta Mita, Nayarit">
-              <img src="/img/playa/pi1.jpg" alt="Punta Mita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/playa/pi2.jpg" data-caption="Punta Mita, Nayarit">
-              <img src="/img/playa/pi2.jpg" alt="Punta Mita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/playa/pi3.jpg" data-caption="Puerto Escondido, Oaxaca">
-              <img src="/img/playa/pi3.jpg" alt="Puerto Escondido" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/playa/pi4.jpg" data-caption="Puerto Escondido, Oaxaca">
-              <img src="/img/playa/pi4.jpg" alt="Puerto Escondido" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/playa/pi8.jpg" data-caption="Punta Mita, Nayarit">
-              <img src="/img/playa/pi8.jpg" alt="Punta Mita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/playa/pi16.jpg" data-caption="Puerto Escondido, Oaxaca">
-              <img src="/img/playa/p16.jpg" alt="Puerto Escondido" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-        <div class="gallery-category">
-          <p class="gallery-label">Product · Jewelry · Maria Bonita</p>
-          <div class="gallery-grid">
-            <div class="gallery-item" data-src="/img/accesorios/arete1.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete1.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete2.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete2.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete3.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete3.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete4.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete4.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete5.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete5.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete6.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete6.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete7.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete7.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-            <div class="gallery-item" data-src="/img/accesorios/arete8.JPG" data-caption="Maria Bonita Joyeria">
-              <img src="/img/accesorios/arete8.JPG" alt="Maria Bonita" loading="lazy">
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <div id="gallery" class="gallery"></div>
     </div>
   </section>
 
-  <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
-    <button class="lb-prev"  id="lb-prev"  aria-label="Previous">&#8592;</button>
-    <button class="lb-next"  id="lb-next"  aria-label="Next">&#8594;</button>
-    <div class="lb-content">
-      <img id="lb-img" src="" alt="">
-      <p id="lb-caption" class="lb-caption"></p>
-    </div>
-  </div>
-
-  <!-- ─── COFFEE ────────────────────────────────────────────────── -->
+  <!-- COFFEE -->
   <section id="coffee" class="section is-dark">
     <div class="section-inner">
       <div class="section-head">
@@ -155,61 +60,21 @@
           "A perfect espresso and a well-designed API share the same principle:
           precision, timing, and knowing when to stop."
         </blockquote>
-        <div class="coffee-items">
-          <div class="coffee-item">
-            <h4>Specialty Coffee</h4>
-            <p>Experience with single-origin beans, brewing methods, and flavor profiling. Understanding the full chain from origin to cup.</p>
-          </div>
-          <div class="coffee-item">
-            <h4>Customer Experience</h4>
-            <p>Built genuine connections with customers. Hospitality as a form of craft — making every interaction feel intentional and warm.</p>
-          </div>
-          <div class="coffee-item">
-            <h4>Process & Precision</h4>
-            <p>Dialing in grind size, extraction time, and temperature. The same systematic thinking I bring to engineering.</p>
-          </div>
-          <div class="coffee-item">
-            <h4>Creativity</h4>
-            <p>Seasonal menus, latte art, and drink design. Coffee as a creative medium with room for personal expression.</p>
-          </div>
-        </div>
+        <div id="coffee-items" class="coffee-items"></div>
       </div>
     </div>
   </section>
 
-  <!-- ─── CREATIVE SKILLS ───────────────────────────────────────── -->
+  <!-- CREATIVE SKILLS -->
   <section id="creative-skills" class="section">
     <div class="section-inner">
       <div class="section-head">
         <span class="section-label">creative skills</span>
         <h2 class="section-title">The craft.</h2>
       </div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4 class="skill-group-title">Photography</h4>
-          <ul class="skill-list">
-            <li>Visual Composition</li><li>Product Photography</li><li>Interior Photography</li><li>Travel Photography</li><li>Lightroom Editing</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Coffee</h4>
-          <ul class="skill-list">
-            <li>Specialty Coffee</li><li>Espresso Dialing</li><li>Latte Art</li><li>Flavor Profiling</li><li>Customer Experience</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Storytelling</h4>
-          <ul class="skill-list">
-            <li>Visual Narrative</li><li>Brand Photography</li><li>Content Creation</li><li>Art Direction</li>
-          </ul>
-        </div>
-      </div>
+      <div id="creative-skills-grid" class="skills-grid"></div>
     </div>
   </section>
-
-  <button id="btn-ir-arriba" aria-label="Back to top">
-    <svg viewBox="0 0 24 24"><path d="m4 16 8-8 8 8"></path></svg>
-  </button>
 
   <footer class="footer-grid"></footer>
 

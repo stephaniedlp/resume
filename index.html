@@ -8,6 +8,8 @@
   <title>Stephanie De La Puente Jouanne</title>
   <link rel="stylesheet" href="/src/styles.css">
   <link rel="stylesheet" href="/src/footer.css">
+  <script src="/js/render.js" defer></script>
+  <script src="/js/data.js" defer></script>
   <script src="/js/components.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
@@ -16,7 +18,7 @@
 
   <div class="menu dark"></div>
 
-  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-eyebrow">
       <span>software engineer</span>
@@ -25,9 +27,7 @@
       <span class="eyebrow-sep">·</span>
       <span>photographer</span>
     </div>
-
     <h1 class="hero-title">steph</h1>
-
     <div class="hero-bottom">
       <p class="hero-description">
         Blending technology, creativity, and human experiences<br>
@@ -37,7 +37,7 @@
     </div>
   </section>
 
-  <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+  <!-- ABOUT -->
   <section id="about" class="section is-dark">
     <div class="section-inner">
       <div class="section-head">
@@ -72,151 +72,35 @@
     </div>
   </section>
 
-  <!-- ─── ENGINEERING ───────────────────────────────────────────── -->
+  <!-- ENGINEERING -->
   <section id="engineering" class="section">
     <div class="section-inner">
-
       <div class="section-head">
         <span class="section-label">engineering</span>
         <h2 class="section-title">Work experience.</h2>
       </div>
+      <div id="exp-table" class="exp-table"></div>
 
-      <div class="exp-table">
-        <div class="exp-row">
-          <div class="exp-meta">
-            <span class="exp-company">Xipe Technology</span>
-            <span class="exp-period">Jan 2024 – Apr 2026</span>
-            <span class="exp-location">Tucson, AZ</span>
-          </div>
-          <div class="exp-body">
-            <h3 class="exp-role">Software Engineer — Security & Systems Integration</h3>
-            <p class="exp-subtitle">Mazda · Ford · Lincoln · Changan · GEMSO</p>
-            <ul class="exp-list">
-              <li>Designed, developed, tested, and maintained enterprise software applications using C#/.NET, SQL, Blazor, and ASP.NET Core across customer-facing and internal business platforms.</li>
-              <li>Participated throughout the Software Development Life Cycle (SDLC) including requirements gathering, software design, implementation, testing, debugging, documentation, deployment support, and production maintenance.</li>
-              <li>Developed and maintained database-driven application features using SQL Server, PostgreSQL, and Entity Framework Core, including data modeling, migrations, queries, and performance improvements.</li>
-              <li>Created software solutions integrating external APIs and internal services, analyzing requirements, defining data flows, and implementing reliable communication between systems.</li>
-              <li>Performed software testing, debugging, verification, and validation by reproducing defects, analyzing logs, using Visual Studio debugging tools, and executing unit, integration, and regression testing with MSTest and NUnit.</li>
-              <li>Designed and executed test scenarios to validate software functionality, identify defects, verify fixes, and ensure applications met technical and business requirements before release.</li>
-              <li>Investigated production issues through application logs, database analysis, and debugging tools, performing root-cause analysis and implementing corrective solutions.</li>
-              <li>Developed and maintained technical documentation including software specifications, architecture references, testing documentation, deployment procedures, and system workflows.</li>
-              <li>Collaborated with developers, business stakeholders, and cross-functional teams to translate requirements into technical solutions and deliver software improvements.</li>
-              <li>Built and maintained API integrations using REST and SOAP services, handling data exchange, authentication flows, and error resolution.</li>
-              <li>Developed administrative tools and database management features using C#, Blazor, and Entity Framework Core to support internal operations.</li>
-              <li>Improved application performance by optimizing SQL queries, adding indexes, and improving database access patterns.</li>
-              <li>Supported Agile development practices through sprint activities, code reviews, issue tracking, and continuous improvement processes.</li>
-              <li>Managed source control workflows using Git, GitHub Actions, and Azure DevOps pipelines to support automated builds and deployments.</li>
-              <li>Supported application deployments by validating functionality across development, testing, and production environments.</li>
-            </ul>
-            <div class="tag-row">
-              <span>C# / .NET 8-9</span><span>ASP.NET Core</span><span>Blazor</span>
-              <span>SQL Server</span><span>PostgreSQL</span><span>EF Core</span>
-              <span>JavaScript</span><span>TypeScript</span>
-              <span>Azure</span><span>Git</span><span>GitHub Actions</span><span>REST</span><span>SOAP/XML</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Built things -->
       <div class="section-head" style="margin-top: var(--space-16);">
         <span class="section-label">featured projects</span>
         <h2 class="section-title">Built things.</h2>
       </div>
-
-      <div class="projects-grid">
-
-        <article class="project-card">
-          <div class="project-head">
-            <span class="project-year">2024 – 2026</span>
-            <h3 class="project-name">GEMSO — Mazda, Ford, Lincoln, Changan</h3>
-          </div>
-          <p class="project-desc">
-            Full-stack eCommerce & vehicle-financing platform. REST API on clean architecture
-            (Domain / Application / Infrastructure), Blazor Server back-office, and a cross-platform
-            .NET MAUI mobile app for iOS & Android. JWT auth, AWS S3 image storage,
-            background jobs with TickerQ, typed Refit HTTP clients, and Polly resilience layer.
-          </p>
-          <div class="tag-row">
-            <span>.NET 8</span><span>ASP.NET Core</span><span>Blazor</span>
-            <span>MAUI</span><span>SQL Server</span><span>PostgreSQL</span>
-            <span>EF Core</span><span>AWS S3</span><span>Refit</span><span>Polly</span>
-          </div>
-          <div class="project-footer">
-            <span class="project-client">Xipe Technology</span>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-head">
-            <span class="project-year">2023</span>
-            <h3 class="project-name">University of Sonora — Front End</h3>
-          </div>
-          <p class="project-desc">
-            Redesigned the official website for the Software Engineering department.
-            Built with a focus on responsive design, accessibility, and clean component architecture.
-          </p>
-          <div class="tag-row">
-            <span>HTML</span><span>SASS</span><span>TypeScript</span>
-          </div>
-          <div class="project-footer">
-            <a href="/pages/portafolio/frontend.html" class="project-link">View project →</a>
-          </div>
-        </article>
-
-      </div>
+      <div id="projects-grid" class="projects-grid"></div>
     </div>
   </section>
 
-  <!-- ─── SKILLS (technical only) ──────────────────────────────── -->
+  <!-- SKILLS -->
   <section id="skills" class="section is-dark">
     <div class="section-inner">
       <div class="section-head">
         <span class="section-label">skills</span>
         <h2 class="section-title">Expertise.</h2>
       </div>
-      <div class="skills-grid">
-        <div class="skill-group">
-          <h4 class="skill-group-title">Languages</h4>
-          <ul class="skill-list">
-            <li>C#</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Frameworks</h4>
-          <ul class="skill-list">
-            <li>.NET 8/9</li><li>ASP.NET Core</li><li>Blazor</li><li>.NET MAUI</li><li>Entity Framework Core</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Databases</h4>
-          <ul class="skill-list">
-            <li>SQL Server</li><li>PostgreSQL</li><li>Qdrant (Vector DB)</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Cloud & DevOps</h4>
-          <ul class="skill-list">
-            <li>Azure</li><li>AWS (S3, EC2)</li><li>Docker</li><li>GitHub Actions</li><li>Azure DevOps</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">AI & Integrations</h4>
-          <ul class="skill-list">
-            <li>Semantic Kernel</li><li>OpenAI API</li><li>RAG Pipelines</li><li>REST APIs</li><li>SOAP/XML</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h4 class="skill-group-title">Practices</h4>
-          <ul class="skill-list">
-            <li>Clean Architecture</li><li>DDD</li><li>SDLC</li><li>Agile / Scrum</li><li>Unit & Integration Testing</li>
-          </ul>
-        </div>
-      </div>
+      <div id="skills-grid" class="skills-grid"></div>
     </div>
   </section>
 
-  <!-- ─── CONTACT ───────────────────────────────────────────────── -->
+  <!-- CONTACT -->
   <section id="contact" class="section">
     <div class="section-inner">
       <div class="section-head">
@@ -249,10 +133,6 @@
       </div>
     </div>
   </section>
-
-  <button id="btn-ir-arriba" aria-label="Back to top">
-    <svg viewBox="0 0 24 24"><path d="m4 16 8-8 8 8"></path></svg>
-  </button>
 
   <footer class="footer-grid"></footer>
 
