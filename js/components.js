@@ -1,4 +1,19 @@
-const NAV_HTML = `
+// ─── Nav HTML builders ────────────────────────────────────────────
+
+function navLink(href, label) {
+  return `
+    <a href="${href}" class="menu-link w-inline-block">
+      <div class="menu-text-ofh">
+        <div class="menu-text-ofh-secure">
+          <div class="menu-text">${label}</div>
+          <div class="menu-text absolute">${label}</div>
+        </div>
+      </div>
+      <div class="menu-dot-holder"><div class="menu-dot"></div></div>
+    </a>`;
+}
+
+const MAIN_NAV = `
   <div class="menu-items-holder-1">
     <a href="/" class="menu-link all w-inline-block">
       <div class="menu-text-ofh">
@@ -10,60 +25,38 @@ const NAV_HTML = `
     </a>
     <div class="menu-products-link-holder">
       <div class="menu-links-col-list">
-        <div class="menu-links-col-item">
-          <a href="/#engineering" class="menu-link w-inline-block">
-            <div class="menu-text-ofh">
-              <div class="menu-text-ofh-secure">
-                <div class="menu-text">Engineering</div>
-                <div class="menu-text absolute">Engineering</div>
-              </div>
-            </div>
-            <div class="menu-dot-holder"><div class="menu-dot"></div></div>
-          </a>
-        </div>
-        <div class="menu-links-col-item">
-          <a href="/#photography" class="menu-link w-inline-block">
-            <div class="menu-text-ofh">
-              <div class="menu-text-ofh-secure">
-                <div class="menu-text">Photography</div>
-                <div class="menu-text absolute">Photography</div>
-              </div>
-            </div>
-            <div class="menu-dot-holder"><div class="menu-dot"></div></div>
-          </a>
-        </div>
+        <div class="menu-links-col-item">${navLink('/#engineering', 'Engineering')}</div>
+        <div class="menu-links-col-item">${navLink('/#skills', 'Skills')}</div>
       </div>
     </div>
   </div>
-
   <div class="menu-items-holder-1">
-    <a href="/#about" class="menu-link w-inline-block">
+    ${navLink('/#about', 'About')}
+    ${navLink('/pages/creative.html', 'Creative')}
+    ${navLink('/#contact', 'Contact')}
+  </div>
+`;
+
+const CREATIVE_NAV = `
+  <div class="menu-items-holder-1">
+    <a href="/" class="menu-link all w-inline-block">
       <div class="menu-text-ofh">
         <div class="menu-text-ofh-secure">
-          <div class="menu-text">About</div>
-          <div class="menu-text absolute">About</div>
+          <div class="menu-text">Stephanie De La Puente Jouanne</div>
+          <div class="menu-text absolute">Stephanie De La Puente Jouanne</div>
         </div>
       </div>
-      <div class="menu-dot-holder"><div class="menu-dot"></div></div>
     </a>
-    <a href="/#coffee" class="menu-link w-inline-block">
-      <div class="menu-text-ofh">
-        <div class="menu-text-ofh-secure">
-          <div class="menu-text">Coffee</div>
-          <div class="menu-text absolute">Coffee</div>
-        </div>
+    <div class="menu-products-link-holder">
+      <div class="menu-links-col-list">
+        <div class="menu-links-col-item">${navLink('#photography', 'Photography')}</div>
+        <div class="menu-links-col-item">${navLink('#coffee', 'Coffee')}</div>
       </div>
-      <div class="menu-dot-holder"><div class="menu-dot"></div></div>
-    </a>
-    <a href="/#contact" class="menu-link w-inline-block">
-      <div class="menu-text-ofh">
-        <div class="menu-text-ofh-secure">
-          <div class="menu-text">Contact</div>
-          <div class="menu-text absolute">Contact</div>
-        </div>
-      </div>
-      <div class="menu-dot-holder"><div class="menu-dot"></div></div>
-    </a>
+    </div>
+  </div>
+  <div class="menu-items-holder-1">
+    ${navLink('/', '← Engineering')}
+    ${navLink('/#contact', 'Contact')}
   </div>
 `;
 
@@ -92,9 +85,13 @@ const FOOTER_HTML = `
   </div>
 `;
 
+// ─── Inject ───────────────────────────────────────────────────────
+
 document.addEventListener('DOMContentLoaded', () => {
+  const isCreative = window.location.pathname.includes('/pages/creative');
+
   const nav = document.querySelector('.menu');
-  if (nav) nav.innerHTML = NAV_HTML;
+  if (nav) nav.innerHTML = isCreative ? CREATIVE_NAV : MAIN_NAV;
 
   const footer = document.querySelector('footer');
   if (footer) footer.innerHTML = FOOTER_HTML;
