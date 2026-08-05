@@ -12,7 +12,18 @@ window.DATA = {
       period:   'Jan 2024 – Apr 2026',
       location: 'Tucson, AZ',
       role:     'Software Engineer — Security & Systems Integration',
-      subtitle: 'Mazda · Ford · Lincoln · Changan · GEMSO · XipeSAS · XipePlatform · Diana',
+      subtitle: 'customer-facing eCommerce & vehicle-financing platforms',
+      projectList: [
+        { name: 'GEMSO',            desc: 'Full-stack eCommerce & vehicle-financing platform · Mazda, Ford, Lincoln, Changan' },
+        { name: 'AgentikSystem',    desc: 'AI / RAG document intelligence platform · Semantic Kernel · Qdrant · OpenAI' },
+        { name: 'Diana',            desc: 'Internal CLI code generator · Roslyn + Scriban · v1 → v4' },
+        { name: 'XipePlatform',     desc: 'Azure cloud infrastructure management portal · Resource Manager SDK' },
+        { name: 'XipeSAS',          desc: 'Multi-tenant SaaS boilerplate · dual-DB · Diana integration' },
+        { name: 'BusinessBox',      desc: 'Business management platform · Azure Blob Storage · MongoDB' },
+        { name: 'HISMagazine2',     desc: 'Digital magazine · public reader + admin panel · Blazor WASM' },
+        { name: 'CarWashPayStation',desc: 'Self-service POS · Blazor WASM · MVVM pattern' },
+        { name: 'AppAgriculture',   desc: 'Cross-platform agricultural app · MAUI + Blazor Hybrid · offline SQLite' },
+      ],
       bullets: [
         'Designed, developed, tested, and maintained enterprise software applications using C#/.NET, SQL, Blazor, and ASP.NET Core across customer-facing and internal business platforms.',
         'Participated throughout the Software Development Life Cycle (SDLC) including requirements gathering, software design, implementation, testing, debugging, documentation, deployment support, and production maintenance.',
@@ -67,13 +78,6 @@ window.DATA = {
       description: 'SaaS portal for managing Azure cloud infrastructure programmatically. Provisions and manages App Services, SQL databases, and compute resources via Azure Resource Manager SDK. Built with Blazor Server and MudBlazor for the admin UI, ASP.NET Core Identity for auth, and SendGrid for transactional email.',
       tags:   ['ASP.NET Core 8', 'Blazor Server', 'Azure Resource Manager', 'Azure SDK', 'MudBlazor', 'EF Core', 'SendGrid', 'Identity'],
       client: 'Xipe Technology',
-    },
-    {
-      year:        '2024',
-      name:        'wins95Portfolio — Interactive Creative Portfolio',
-      description: 'Interactive personal portfolio designed as a Windows 95 desktop experience. Features a draggable window system, simulated taskbar, login screen, Winamp emulator, and a contact form via EmailJS — all built from scratch without CSS libraries. Animated with Framer Motion.',
-      tags:   ['React 18', 'Vite', 'Framer Motion', 'react-draggable', 'EmailJS', 'GitHub Pages', 'JavaScript'],
-      link:   'https://yuteoctober.github.io/wins95Portfolio/',
     },
     {
       year:        '2024',

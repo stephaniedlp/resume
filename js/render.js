@@ -5,7 +5,20 @@
 
 window.R = {
 
-  expRow({ company, period, location, role, subtitle, bullets, tags }) {
+  expRow({ company, period, location, role, subtitle, projectList, bullets, tags }) {
+    const projectsBlock = projectList && projectList.length
+      ? `<div class="exp-projects">
+           <p class="exp-projects-label">Projects</p>
+           <div class="exp-projects-grid">
+             ${projectList.map(p => `
+               <div class="exp-project-item">
+                 <span class="exp-project-name">${p.name}</span>
+                 <span class="exp-project-desc">${p.desc}</span>
+               </div>`).join('')}
+           </div>
+         </div>`
+      : '';
+
     return `
       <div class="exp-row">
         <div class="exp-meta">
@@ -16,6 +29,7 @@ window.R = {
         <div class="exp-body">
           <h3 class="exp-role">${role}</h3>
           <p class="exp-subtitle">${subtitle}</p>
+          ${projectsBlock}
           <ul class="exp-list">
             ${bullets.map(b => `<li>${b}</li>`).join('')}
           </ul>
