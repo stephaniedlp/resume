@@ -45,7 +45,37 @@ function buildNav(isCreative) {
     </div>
     <div class="menu-items-holder-1">
       ${right.join('')}
+      <button class="menu-nav-toggle" id="menu-nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
     </div>`;
+}
+
+function buildOverlay(isCreative) {
+  const links = isCreative
+    ? [
+        { href: '#photography',        label: 'Photography' },
+        { href: '#coffee',             label: 'Coffee' },
+        { href: '/',                   label: 'Engineering' },
+        { href: '/#contact',           label: 'Contact' },
+      ]
+    : [
+        { href: '/#engineering',       label: 'Engineering' },
+        { href: '/#skills',            label: 'Skills' },
+        { href: '/#about',             label: 'About' },
+        { href: '/pages/creative.html',label: 'Creative' },
+        { href: '/#contact',           label: 'Contact' },
+      ];
+
+  return `
+  <div class="nav-overlay" id="nav-overlay">
+    <p class="nav-overlay-eyebrow">Stephanie De La Puente</p>
+    <nav class="nav-overlay-links">
+      ${links.map(l => `<a href="${l.href}" class="nav-overlay-link">${l.label}</a>`).join('')}
+    </nav>
+  </div>`;
 }
 
 // ─── Footer ───────────────────────────────────────────────────────
@@ -106,8 +136,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // Scroll-to-top button (shared on all pages)
   document.body.insertAdjacentHTML('beforeend', SCROLL_BTN_HTML);
 
+  // Mobile fullscreen nav overlay
+  document.body.insertAdjacentHTML('beforeend', buildOverlay(isCreative));
+
   // Lightbox (only on pages with a gallery)
   if (document.querySelector('.gallery')) {
     document.body.insertAdjacentHTML('beforeend', LIGHTBOX_HTML);
   }
+
+  // ─── Hamburger toggle ─────────────────────────────────────────
+  const toggle  = document.getElementById('menu-nav-toggle');
+  const overlay = document.getElementById('nav-overlay');
+
+  function openNav() {
+    document.body.classList.add('nav-is-open');
+    toggle?.setAttribute('aria-expanded', 'true');
+    toggle?.setAttribute('aria-label', 'Close menu');
+  }
+  function closeNav() {
+    document.body.classList.remove('nav-is-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    toggle?.setAttribute('aria-label', 'Open menu');
+  }
+
+  toggle?.addEventListener('click', () => {
+    document.body.classList.contains('nav-is-open') ? closeNav() : openNav();
+  });
+
+  overlay?.querySelectorAll('.nav-overlay-link').forEach(link => {
+    link.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeNav();
+  });
 });
