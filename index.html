@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stephanie De La Puente Jouanne — Software Engineer, Barista & Photographer.">
   <title>Stephanie De La Puente Jouanne</title>
-  <link rel="stylesheet" type="text/css" href="/src/styles.css">
-  <link rel="stylesheet" type="text/css" href="/src/footer.css">
+  <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/src/footer.css">
   <script src="/js/components.js" defer></script>
   <script src="/js/main.js" defer></script>
 </head>
@@ -15,240 +16,387 @@
 
   <div class="menu dark"></div>
 
-  <div class="page-wrapper">
-    <main class="main-wrapper">
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section id="hero" class="hero">
+    <div class="hero-eyebrow">
+      <span>software engineer</span>
+      <span class="eyebrow-sep">·</span>
+      <span>barista</span>
+      <span class="eyebrow-sep">·</span>
+      <span>photographer</span>
+    </div>
 
-      <!-- OVERVIEW -->
-      <section id="overview">
-        <div class="product-all-info-holder secdark">
-          <div class="product-page-year-text-holder">
-            <h4>software developer</h4>
-            <div class="product-page-year-dot dark"></div>
+    <h1 class="hero-title">steph</h1>
+
+    <div class="hero-bottom">
+      <p class="hero-description">
+        Blending technology, creativity, and human experiences<br>
+        through code, coffee, and photography.
+      </p>
+      <a href="#engineering" class="btn-primary">Explore work ↓</a>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+  <section id="about" class="section is-dark">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-label">about me</span>
+        <h2 class="section-title">A curious mind.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm Stephanie — a Full Stack Software Engineer who builds scalable systems by day and finds beauty in small moments at every other hour. My world lives at the intersection of clean code, specialty coffee, and light hitting a lens at the right angle.</p>
+          <p>As an engineer, I architect multi-tenant SaaS platforms, build RAG-powered AI systems, and ship production software for clients across automotive and tech industries. I believe great software is about understanding people as much as understanding systems.</p>
+          <p>As a barista, I've learned that precision, timing, and intuition matter as much in a cup of coffee as they do in a well-designed API. As a photographer, I frame the world with the same intentionality I bring to architecture diagrams — every shot a decision about what to include and what to leave out.</p>
+        </div>
+        <div class="about-details">
+          <div class="detail-row">
+            <span class="detail-label">Based in</span>
+            <span class="detail-value">Mexico</span>
           </div>
-          <div class="container-h1">
-            <h1 data-splitting="words" class="container-h1 word splitting reveal">steph</h1>
+          <div class="detail-row">
+            <span class="detail-label">Specializing in</span>
+            <span class="detail-value">.NET · Cloud · AI</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Also into</span>
+            <span class="detail-value">Specialty Coffee · Visual Arts</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Available for</span>
+            <span class="detail-value">Full-time · Freelance</span>
           </div>
         </div>
-        <div class="section-content">
-          <p>Full Stack developer building secure, scalable, and user-oriented applications. Focused on
-            Object-Oriented Principles (OOP) and Domain-Driven Design (DDD). Specializing in the .NET ecosystem.</p>
-        </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-      <!-- WORK EXPERIENCE -->
-      <section id="workexperience">
-        <div class="product-all-info-holder secdark">
-          <div class="product-page-year-text-holder">
-            <h4>skills</h4>
-            <div class="product-page-year-dot dark"></div>
+  <!-- ─── ENGINEERING ───────────────────────────────────────────── -->
+  <section id="engineering" class="section">
+    <div class="section-inner">
+
+      <div class="section-head">
+        <span class="section-label">engineering</span>
+        <h2 class="section-title">Work experience.</h2>
+      </div>
+
+      <div class="exp-table">
+
+        <div class="exp-row">
+          <div class="exp-meta">
+            <span class="exp-company">Xipe Technology</span>
+            <span class="exp-period">Jan 2024 – Apr 2026</span>
           </div>
-          <div class="container-h1">
-            <h1 data-splitting="words" class="container-h1 word splitting reveal">work experience</h1>
-          </div>
-        </div>
-        <div class="section-content">
-          <div class="sectopm-hero_content">
-            <div class="service-hero_grid">
-              <div class="service-hero_text-part">
-                <div class="service-hero_paragraph-part">
-                  <p class="t-paragraph-1-rg">
-                    Building scalable SaaS platforms, RAG chat systems, and MVPs for early-stage validation.
-                    Focused on cloud-native deployments, optimized APIs, and modern .NET stack development.
-                  </p>
-                </div>
-              </div>
-              <div class="service-hero_table-part">
-
-                <div class="service-hero_table-row">
-                  <div class="t-label-1-rg">Xipe Technology — eCommerce & Vehicle Financing Platforms</div>
-                  <div class="service-hero_table-row-group">
-                    <div class="t-paragraph-1-rg">Jan 2024 – Apr 2026 · Mazda · Ford · Lincoln · Changan · GEMSO</div>
-                    <div class="t-paragraph-1-rg"><strong>Stack:</strong> C# (.NET 8/9), ASP.NET Core, Blazor, SQL Server, PostgreSQL, Entity Framework Core, JavaScript, TypeScript, Azure, GitHub Actions, REST APIs, SOAP/XML</div>
-                    <div class="t-paragraph-1-rg">• Designed, developed, tested, and maintained enterprise software applications across customer-facing and internal business platforms.</div>
-                    <div class="t-paragraph-1-rg">• Participated throughout the full SDLC: requirements gathering, design, implementation, testing, debugging, documentation, deployment, and production maintenance.</div>
-                    <div class="t-paragraph-1-rg">• Developed and maintained database-driven features using SQL Server, PostgreSQL, and EF Core — including data modeling, migrations, queries, and performance improvements.</div>
-                    <div class="t-paragraph-1-rg">• Built software integrations analyzing requirements, defining data flows, and implementing reliable communication between external APIs and internal services.</div>
-                    <div class="t-paragraph-1-rg">• Performed testing, debugging, and validation by reproducing defects, analyzing logs, using Visual Studio debugging tools, and executing unit, integration, and regression tests with MSTest and NUnit.</div>
-                    <div class="t-paragraph-1-rg">• Investigated production issues through logs, database analysis, and debugging tools — performing root-cause analysis and implementing corrective solutions.</div>
-                    <div class="t-paragraph-1-rg">• Developed and maintained technical documentation including software specifications, architecture references, testing docs, deployment procedures, and system workflows.</div>
-                    <div class="t-paragraph-1-rg">• Built and maintained API integrations using REST and SOAP services.</div>
-                  </div>
-                </div>
-
-                <div class="service-hero_table-row">
-                  <div class="t-label-1-rg">Modular SaaS Base</div>
-                  <div class="service-hero_table-row-group">
-                    <div class="t-paragraph-1-rg">Xipe Technology | Jan 23 - Present</div>
-                    <div class="t-paragraph-1-rg"><strong>Roles:</strong> Backend / Lead / Frontend Developer</div>
-                    <div class="t-paragraph-1-rg"><strong>Stack:</strong> .NET 8/9, SQL Server, AWS</div>
-                    <div class="t-paragraph-1-rg">• Architected a multi-tenant SaaS boilerplate with custom authentication (SMS + JWT).</div>
-                    <div class="t-paragraph-1-rg">• Deployed microservices with Docker & GitHub Actions.</div>
-                    <div class="t-paragraph-1-rg">• Optimized EF Core queries and integrated SQL + NoSQL.</div>
-                  </div>
-                </div>
-
-                <div class="service-hero_table-row">
-                  <div class="t-label-1-rg">RAG Chat System</div>
-                  <div class="service-hero_table-row-group">
-                    <div class="t-paragraph-1-rg">Full Stack Developer</div>
-                    <div class="t-paragraph-1-rg"><strong>Stack:</strong> .NET 8/9, Semantic Kernel, Qdrant, OpenAI</div>
-                    <div class="t-paragraph-1-rg">• Built RAG pipelines with embeddings & vector DB.</div>
-                    <div class="t-paragraph-1-rg">• Integrated personalized memory & optimized retrieval.</div>
-                  </div>
-                </div>
-
-                <div class="service-hero_table-row">
-                  <div class="t-label-1-rg">Client MVPs</div>
-                  <div class="service-hero_table-row-group">
-                    <div class="t-paragraph-1-rg">Full Stack Developer</div>
-                    <div class="t-paragraph-1-rg"><strong>Stack:</strong> .NET 8/9, Azure DevOps, SQL Server</div>
-                    <div class="t-paragraph-1-rg">• Delivered 5+ MVPs for client validation.</div>
-                    <div class="t-paragraph-1-rg">• Built real-time apps & prototyping tools.</div>
-                    <div class="t-paragraph-1-rg">• Focused on rapid iteration & AWS deployment.</div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PORTAFOLIO -->
-      <section id="portafolio">
-        <div class="product-all-info-holder secdark">
-          <div class="container-h1">
-            <h1 data-splitting="words" class="container-h1 word splitting reveal">portafolio</h1>
-            <div class="product-page-year-text-holder">
-              <div class="product-page-year-ofh">
-                <div class="product-page-year-text dark">Software Engineer</div>
-              </div>
-              <div class="product-page-year-dot dark"></div>
+          <div class="exp-body">
+            <h3 class="exp-role">Full Stack Engineer</h3>
+            <p class="exp-subtitle">eCommerce & Vehicle Financing · Mazda · Ford · Lincoln · Changan · GEMSO</p>
+            <ul class="exp-list">
+              <li>Designed, developed, tested, and maintained enterprise software across customer-facing and internal business platforms.</li>
+              <li>Built database-driven features using SQL Server, PostgreSQL, and EF Core — migrations, queries, and performance improvements.</li>
+              <li>Integrated external REST and SOAP APIs; defined data flows and implemented reliable inter-service communication.</li>
+              <li>Participated in the full SDLC: requirements gathering, design, implementation, testing, deployment, and production maintenance.</li>
+              <li>Investigated production issues via logs and debugging tools; root-cause analysis and corrective solutions.</li>
+              <li>Maintained technical documentation: software specs, architecture references, deployment procedures, and system workflows.</li>
+            </ul>
+            <div class="tag-row">
+              <span>C# / .NET 8-9</span><span>ASP.NET Core</span><span>Blazor</span>
+              <span>SQL Server</span><span>PostgreSQL</span><span>EF Core</span>
+              <span>Azure</span><span>GitHub Actions</span><span>REST</span><span>SOAP/XML</span>
             </div>
           </div>
         </div>
 
-        <!-- PROYECTOS — agrega cards aquí -->
-        <section class="card-list">
-          <!-- Proyecto: GEMSO -->
-          <article class="card">
-            <header class="card-header">
-              <p>2024 – 2026 · Xipe Technology</p>
-              <h2>GEMSO</h2>
-            </header>
-            <p class="card-description">
-              Full-stack vehicle ownership & services platform. REST API with clean architecture (Domain / Application / Infrastructure),
-              Blazor Server back-office, and .NET MAUI mobile app (iOS & Android). JWT auth, AWS S3 image storage, EF Core migrations, background jobs with TickerQ.
-            </p>
-            <div class="tags">
-              <a>.NET 8</a>
-              <a>ASP.NET Core</a>
-              <a>Blazor</a>
-              <a>MAUI</a>
-              <a>SQL Server</a>
-              <a>EF Core</a>
-              <a>AWS S3</a>
-              <a>JWT</a>
-            </div>
-          </article>
-
-          <!-- Proyecto: GEMSO Autos -->
-          <article class="card">
-            <header class="card-header">
-              <p>2024 – 2026 · Xipe Technology</p>
-              <h2>GEMSO Autos</h2>
-            </header>
-            <p class="card-description">
-              Automotive dealer eCommerce & vehicle-financing platform serving Mazda, Ford, Lincoln, and Changan.
-              Same clean-architecture stack: REST API, Blazor back-office, and .NET MAUI mobile app. Polly resilience, Refit typed HTTP clients, in-memory cache layer.
-            </p>
-            <div class="tags">
-              <a>.NET 8</a>
-              <a>ASP.NET Core</a>
-              <a>Blazor</a>
-              <a>MAUI</a>
-              <a>PostgreSQL</a>
-              <a>EF Core</a>
-              <a>Refit</a>
-              <a>Polly</a>
-            </div>
-          </article>
-
-          <!-- Proyecto: Frontend University -->
-          <article class="card">
-            <a href="/pages/portafolio/frontend.html">
-              <header class="card-header">
-                <p>2023</p>
-                <h2>Front End · University of Sonora</h2>
-              </header>
-            </a>
-            <div class="card-author">
-              <a class="author-avatar" href="/pages/portafolio/frontend.html">
-                <img src="/img/banio/baniosiete.jpg" alt="Front End project" />
-              </a>
-              <div class="author-name">
-                <div class="author-name-prefix">HTML / CSS / TypeScript</div>
-              </div>
-            </div>
-            <div class="tags">
-              <a>html</a>
-              <a>css</a>
-              <a>typescript</a>
-            </div>
-          </article>
-          <!-- ↓ Agrega más proyectos aquí ↓ -->
-        </section>
-      </section>
-
-      <!-- PHOTOGRAPHY -->
-      <section id="photography">
-        <div class="product-all-info-holder secdark">
-          <div class="product-page-year-text-holder">
-            <h4>creative world</h4>
-            <div class="product-page-year-dot dark"></div>
+        <div class="exp-row">
+          <div class="exp-meta">
+            <span class="exp-company">Xipe Technology</span>
+            <span class="exp-period">Jan 2023 – Jan 2024</span>
           </div>
-          <div class="container-h1">
-            <h1 data-splitting="words" class="container-h1 word splitting reveal">photography</h1>
+          <div class="exp-body">
+            <h3 class="exp-role">Backend / Lead / Frontend Developer</h3>
+            <p class="exp-subtitle">Modular SaaS Platform · RAG AI Systems · Client MVPs</p>
+            <ul class="exp-list">
+              <li>Architected a multi-tenant SaaS boilerplate with custom SMS + JWT authentication.</li>
+              <li>Built RAG chat pipelines with embeddings, vector DB (Qdrant), and Semantic Kernel.</li>
+              <li>Delivered 5+ client MVPs focused on rapid iteration and AWS deployment.</li>
+              <li>Deployed microservices with Docker & GitHub Actions; optimized EF Core and integrated SQL + NoSQL.</li>
+            </ul>
+            <div class="tag-row">
+              <span>.NET 8/9</span><span>Semantic Kernel</span><span>Qdrant</span>
+              <span>OpenAI</span><span>AWS</span><span>Docker</span>
+            </div>
           </div>
         </div>
 
-        <div class="section-project-grid">
-          <div class="project-col">
-            <div class="product-grid-col-list">
+      </div>
 
-              <div class="product-grid-col-item">
-                <a href="/pages/galeria/galleryOne.html" class="rounded-grid-link">
-                  <img class="grid-img" src="/img/banio/baniouno.jpg" alt="Marsella Hotel Boutique">
-                  <span><h3>Marsella | Hotel Boutique</h3></span>
-                </a>
-              </div>
+      <!-- Projects -->
+      <div class="section-head" style="margin-top: var(--space-16);">
+        <span class="section-label">featured projects</span>
+        <h2 class="section-title">Built things.</h2>
+      </div>
 
-              <div class="product-grid-col-item">
-                <a href="/pages/galeria/galleryTwo.html" class="rounded-grid-link">
-                  <img class="grid-img" src="/img/playa/pi2.jpg" alt="Punta Mita Nayarit">
-                  <span><h3>Punta Mita | Nayarit</h3></span>
-                </a>
-              </div>
+      <div class="projects-grid">
 
-              <div class="product-grid-col-item">
-                <a href="/pages/galeria/galleryTree.html" class="rounded-grid-link">
-                  <img class="grid-img" src="/img/accesorios/arete1.JPG" alt="Maria Bonita Joyeria">
-                  <span><h3>Maria Bonita | Joyeria</h3></span>
-                </a>
-              </div>
+        <article class="project-card">
+          <div class="project-head">
+            <span class="project-year">2024 – 2026</span>
+            <h3 class="project-name">GEMSO</h3>
+          </div>
+          <p class="project-desc">
+            Full-stack vehicle ownership & services platform. REST API built on clean architecture
+            (Domain / Application / Infrastructure), Blazor Server back-office for operators,
+            and a cross-platform .NET MAUI mobile app for iOS & Android. Features JWT auth,
+            AWS S3 image storage, background jobs with TickerQ, and Polly resilience on all HTTP clients.
+          </p>
+          <div class="tag-row">
+            <span>.NET 8</span><span>ASP.NET Core</span><span>Blazor</span>
+            <span>MAUI</span><span>SQL Server</span><span>EF Core</span>
+            <span>AWS S3</span><span>JWT</span><span>Refit</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-client">Xipe Technology</span>
+          </div>
+        </article>
 
+        <article class="project-card">
+          <div class="project-head">
+            <span class="project-year">2024 – 2026</span>
+            <h3 class="project-name">GEMSO Autos</h3>
+          </div>
+          <p class="project-desc">
+            Automotive dealer eCommerce & vehicle-financing platform for Mazda, Ford, Lincoln, and Changan.
+            Dealer back-office, customer-facing eCommerce, and financing workflows. MVVM mobile app
+            with in-memory cache, typed Refit HTTP clients, and a Polly resilience layer.
+          </p>
+          <div class="tag-row">
+            <span>.NET 8</span><span>ASP.NET Core</span><span>Blazor</span>
+            <span>MAUI</span><span>PostgreSQL</span><span>EF Core</span>
+            <span>Refit</span><span>Polly</span><span>MVVM</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-client">Xipe Technology · Mazda · Ford · Lincoln · Changan</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-head">
+            <span class="project-year">2023</span>
+            <h3 class="project-name">University of Sonora — Front End</h3>
+          </div>
+          <p class="project-desc">
+            Redesigned the official website for the Software Engineering department.
+            Built with a focus on responsive design, accessibility, and clean component architecture.
+          </p>
+          <div class="tag-row">
+            <span>HTML</span><span>SASS</span><span>TypeScript</span>
+          </div>
+          <div class="project-footer">
+            <a href="/pages/portafolio/frontend.html" class="project-link">View project →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── COFFEE ────────────────────────────────────────────────── -->
+  <section id="coffee" class="section is-dark">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-label">barismo</span>
+        <h2 class="section-title">Coffee craft.</h2>
+      </div>
+      <div class="coffee-layout">
+        <blockquote class="coffee-quote">
+          "A perfect espresso and a well-designed API share the same principle:
+          precision, timing, and knowing when to stop."
+        </blockquote>
+        <div class="coffee-items">
+          <div class="coffee-item">
+            <h4>Specialty Coffee</h4>
+            <p>Experience with single-origin beans, brewing methods, and flavor profiling. Understanding the full chain from origin to cup.</p>
+          </div>
+          <div class="coffee-item">
+            <h4>Customer Experience</h4>
+            <p>Built genuine connections with customers. Hospitality as a form of craft — making every interaction feel intentional and warm.</p>
+          </div>
+          <div class="coffee-item">
+            <h4>Process & Precision</h4>
+            <p>Dialing in grind size, extraction time, and temperature. The same systematic thinking I bring to engineering.</p>
+          </div>
+          <div class="coffee-item">
+            <h4>Creativity</h4>
+            <p>Seasonal menus, latte art, and drink design. Coffee as a creative medium with room for personal expression.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PHOTOGRAPHY ───────────────────────────────────────────── -->
+  <section id="photography" class="section">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-label">photography</span>
+        <h2 class="section-title">Through the lens.</h2>
+      </div>
+
+      <div class="gallery">
+
+        <div class="gallery-category">
+          <p class="gallery-label">Hotel · Interior · Marsella</p>
+          <div class="gallery-grid">
+            <div class="gallery-item" data-src="/img/banio/baniouno.jpg" data-caption="Marsella Hotel Boutique">
+              <img src="/img/banio/baniouno.jpg" alt="Marsella Hotel Boutique" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/banio/baniodos.jpg" data-caption="Marsella Hotel Boutique">
+              <img src="/img/banio/baniodos.jpg" alt="Marsella Hotel Boutique" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/banio/baniotres.jpg" data-caption="Marsella Hotel Boutique">
+              <img src="/img/banio/baniotres.jpg" alt="Marsella Hotel Boutique" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/banio/baniocuatro.jpg" data-caption="Marsella Hotel Boutique">
+              <img src="/img/banio/baniocuatro.jpg" alt="Marsella Hotel Boutique" loading="lazy">
             </div>
           </div>
         </div>
-      </section>
 
-    </main>
+        <div class="gallery-category">
+          <p class="gallery-label">Travel · Coast · Nayarit & Oaxaca</p>
+          <div class="gallery-grid">
+            <div class="gallery-item" data-src="/img/playa/pi1.jpg" data-caption="Punta Mita, Nayarit">
+              <img src="/img/playa/pi1.jpg" alt="Punta Mita" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/playa/pi2.jpg" data-caption="Punta Mita, Nayarit">
+              <img src="/img/playa/pi2.jpg" alt="Punta Mita" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/playa/pi3.jpg" data-caption="Puerto Escondido, Oaxaca">
+              <img src="/img/playa/pi3.jpg" alt="Puerto Escondido" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/playa/pi4.jpg" data-caption="Puerto Escondido, Oaxaca">
+              <img src="/img/playa/pi4.jpg" alt="Puerto Escondido" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-category">
+          <p class="gallery-label">Product · Jewelry · Maria Bonita</p>
+          <div class="gallery-grid">
+            <div class="gallery-item" data-src="/img/accesorios/arete1.JPG" data-caption="Maria Bonita Joyeria">
+              <img src="/img/accesorios/arete1.JPG" alt="Maria Bonita" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/accesorios/arete2.JPG" data-caption="Maria Bonita Joyeria">
+              <img src="/img/accesorios/arete2.JPG" alt="Maria Bonita" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/accesorios/arete3.JPG" data-caption="Maria Bonita Joyeria">
+              <img src="/img/accesorios/arete3.JPG" alt="Maria Bonita" loading="lazy">
+            </div>
+            <div class="gallery-item" data-src="/img/accesorios/arete4.JPG" data-caption="Maria Bonita Joyeria">
+              <img src="/img/accesorios/arete4.JPG" alt="Maria Bonita" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
+    <button class="lb-prev"  id="lb-prev"  aria-label="Previous">&#8592;</button>
+    <button class="lb-next"  id="lb-next"  aria-label="Next">&#8594;</button>
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-caption" class="lb-caption"></p>
+    </div>
   </div>
 
-  <button id="btn-ir-arriba">
-    <svg viewBox="0 0 24 24">
-      <path d="m4 16 8-8 8 8"></path>
-    </svg>
+  <!-- ─── SKILLS ────────────────────────────────────────────────── -->
+  <section id="skills" class="section is-dark">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-label">skills</span>
+        <h2 class="section-title">Expertise.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h4 class="skill-group-title">Languages</h4>
+          <ul class="skill-list">
+            <li>C#</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group-title">Frameworks</h4>
+          <ul class="skill-list">
+            <li>.NET 8/9</li><li>ASP.NET Core</li><li>Blazor</li><li>.NET MAUI</li><li>Entity Framework Core</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group-title">Databases</h4>
+          <ul class="skill-list">
+            <li>SQL Server</li><li>PostgreSQL</li><li>Qdrant (Vector DB)</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group-title">Cloud & DevOps</h4>
+          <ul class="skill-list">
+            <li>Azure</li><li>AWS (S3, EC2)</li><li>Docker</li><li>GitHub Actions</li><li>Azure DevOps</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group-title">AI & Integrations</h4>
+          <ul class="skill-list">
+            <li>Semantic Kernel</li><li>OpenAI API</li><li>RAG Pipelines</li><li>REST APIs</li><li>SOAP/XML</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h4 class="skill-group-title">Creative</h4>
+          <ul class="skill-list">
+            <li>Photography</li><li>Visual Composition</li><li>Product Photography</li><li>Specialty Coffee</li><li>Storytelling</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ───────────────────────────────────────────────── -->
+  <section id="contact" class="section">
+    <div class="section-inner">
+      <div class="section-head">
+        <span class="section-label">contact</span>
+        <h2 class="section-title">Let's connect.</h2>
+      </div>
+      <div class="contact-layout">
+        <p class="contact-intro">
+          Open to full-time opportunities, freelance projects, and creative collaborations.
+          Whether it's an engineering challenge, a photo shoot, or great coffee — let's talk.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:stephaniedlp00@gmail.com" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">stephaniedlp00@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/stephaniedelapuentej/" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">stephaniedelapuentej</span>
+          </a>
+          <a href="https://github.com/stephaniedlp" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">stephaniedlp</span>
+          </a>
+          <a href="https://www.instagram.com/pagee.nott.found/" target="_blank" rel="noopener" class="contact-item">
+            <span class="contact-label">Instagram</span>
+            <span class="contact-value">pagee.nott.found</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <button id="btn-ir-arriba" aria-label="Back to top">
+    <svg viewBox="0 0 24 24"><path d="m4 16 8-8 8 8"></path></svg>
   </button>
 
   <footer class="footer-grid"></footer>
