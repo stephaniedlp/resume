@@ -845,6 +845,124 @@ a.menu-link:hover .menu-text.absolute { transform: translate(0, 0); }
 }
 
 /* ─────────────────────────────────────────────────────────────
+   DOWNLOAD RESUME BUTTON
+───────────────────────────────────────────────────────────── */
+.btn-download-resume {
+  display: inline-block;
+  margin-top: var(--space-6);
+  padding: .6rem 1.5rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 999px;
+  background: none;
+  font-family: var(--font-family);
+  font-size: var(--text-xs);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  cursor: pointer;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.btn-download-resume:hover {
+  border-color: var(--clr-dark);
+  color: var(--clr-bg);
+  background: var(--clr-dark);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRINT / PDF
+───────────────────────────────────────────────────────────── */
+@media print {
+  /* Show only the work experience */
+  .menu, footer, #btn-ir-arriba, .nav-overlay,
+  #hero, #about, #projects-grid, #skills, #contact,
+  .section-head h2, .btn-download-resume,
+  .section:not(#engineering), .section-label { display: none !important; }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+    font-family: Georgia, serif;
+  }
+
+  #engineering {
+    padding: 0;
+    background: #fff;
+    color: #000;
+  }
+
+  /* Resume header */
+  #engineering .section-inner::before {
+    content: "Stephanie De La Puente Jouanne";
+    display: block;
+    font-size: 22pt;
+    font-weight: 700;
+    letter-spacing: .01em;
+    margin-bottom: .25rem;
+  }
+
+  #engineering .section-inner::after {
+    content: "stephaniedlp00@gmail.com  ·  520 955 0918  ·  Tucson, AZ  ·  stephaniedlp (GitHub)  ·  U.S. Citizen";
+    display: block;
+    font-size: 9pt;
+    color: #555;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1pt solid #ccc;
+  }
+
+  .exp-row {
+    display: block;
+    page-break-inside: avoid;
+    padding: .75rem 0;
+    border-top: 1pt solid #ccc;
+  }
+
+  .exp-row:last-child { border-bottom: 1pt solid #ccc; }
+
+  .exp-meta {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: .35rem;
+  }
+
+  .exp-company  { font-weight: 700; font-size: 11pt; }
+  .exp-period   { font-size: 9pt; color: #555; }
+  .exp-location { font-size: 9pt; color: #555; }
+  .exp-role     { font-size: 11pt; font-weight: 600; margin-bottom: .2rem; }
+  .exp-subtitle { font-size: 9pt; color: #555; margin-bottom: .5rem; }
+
+  .exp-projects {
+    border: 1pt solid #ddd;
+    border-radius: 0;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    background: #f9f9f9;
+  }
+
+  .exp-projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .exp-project-name  { font-size: 9pt; font-weight: 600; }
+  .exp-project-desc  { font-size: 8pt; color: #555; }
+
+  .exp-list li {
+    font-size: 9.5pt;
+    color: #222;
+    line-height: 1.5;
+  }
+
+  .tag-row { display: none; }
+
+  a { color: inherit; text-decoration: none; }
+
+  @page {
+    margin: 1.5cm 2cm;
+    size: A4;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
    HAMBURGER BUTTON
 ───────────────────────────────────────────────────────────── */
 .menu-nav-toggle {
