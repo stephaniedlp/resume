@@ -27,9 +27,15 @@ window.R = {
   },
 
   projectCard({ year, name, description, tags, client, link }) {
-    const footer = link
-      ? `<a href="${link}" class="project-link">View project →</a>`
+    const isExternal = link && link.startsWith('http');
+    const footerRight = link
+      ? `<a href="${link}" class="project-link" ${isExternal ? 'target="_blank" rel="noopener"' : ''}>
+           ${isExternal ? 'Live demo →' : 'View project →'}
+         </a>`
       : `<span class="project-client">${client}</span>`;
+    const footer = client && link
+      ? `<span class="project-client">${client}</span>${footerRight}`
+      : footerRight;
 
     return `
       <article class="project-card">
