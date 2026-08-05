@@ -119,7 +119,9 @@ p  { line-height: 1.7; }
   transition: color 1s var(--ease-out);
 }
 
-.menu.dark { color: var(--clr-dark); }
+.menu.dark   { color: var(--clr-dark); }
+.menu--light { color: var(--clr-bg); }
+.menu--light .menu-dot { background-color: var(--clr-bg); }
 
 .menu-items-holder-1 {
   display: flex;

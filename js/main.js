@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // ─── Lightbox (event delegation — works after dynamic render) ───
   initLightbox();
 
+  // ─── Nav colour (dark ↔ light based on section background) ─────
+  initNavTheme();
+
   // ─── Fade-in on scroll ──────────────────────────────────────────
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -118,6 +121,28 @@ function initLightbox() {
     document.body.style.overflow = '';
     lbImg.src = '';
   }
+}
+
+// ─── Nav theme (white text over dark sections) ──────────────────────
+
+function initNavTheme() {
+  const nav = document.querySelector('.menu');
+  if (!nav) return;
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        nav.classList.toggle('menu--light', entry.target.dataset.nav === 'light');
+      }
+    });
+  }, {
+    // Thin 1px strip at the very top of the viewport — fires when a
+    // section's leading edge crosses the nav area.
+    rootMargin: '-1px 0px -99% 0px',
+    threshold: 0,
+  });
+
+  document.querySelectorAll('[data-nav]').forEach(el => obs.observe(el));
 }
 
 // ─── Utility ────────────────────────────────────────────────────────
