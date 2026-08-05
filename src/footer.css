@@ -1,143 +1,83 @@
-
-/* #region footer*/
 footer {
-    background: var(--main-dark);
-    color: var(--main-light);
-    padding: 2rem;
+  background: var(--main-dark);
+  color: var(--main-light);
+  padding: 2rem;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
-    gap: 2rem;
-    padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 2rem;
+  padding: 3rem 2rem;
 }
 
-/* Servicios */
-.footer_service-col {
-    grid-column: 1;
-    grid-row: 1;
-}
-
-.footer_service-links-box {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.service-link {
-    text-decoration: none;
-    font-size: 0.95rem;
-}
-
-.service-link:hover {
-    opacity: 0.7;
-}
-
-/* Columna vacía (col 2 fila 1) la dejamos sin estilos */
-
-/* Business Enquiries */
+/* Business enquiries */
 .footer_contact-col {
-    grid-column: 3;
-    grid-row: 1;
-    grid-column-gap: .5rem;
-    grid-row-gap: .5rem;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: flex;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
+
 .footer_contact-col.is-last {
-    align-items: stretch;
+  align-items: stretch;
 }
 
 .contact-link {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: inherit;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 .contact-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
-/* Nombre que ocupa 2 columnas */
+/* Nombre grande */
 .under-footer-text-title {
-    grid-column: 1 / span 2;
-    /* ocupa col 1 y 2 */
-    grid-row: 2;
-    font-weight: 600;
-    font-size: 5rem; 
-    text-wrap: unset;
-  
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  font-weight: 600;
+  font-size: 5rem;
 }
 
 /* Socials */
-/* Footer Socials */
 .footer_socials {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    font-family: var(--font-family, 'Noi Grotesk', sans-serif);
-    
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
- 
-}
-
-.footer_socials .t-label-1-rg {
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    font-weight: 500;
-    text-transform: uppercase;
-    margin-bottom: 0.5rem;
-    
-    color: rgba(255, 255, 255, 0.5);
+  grid-column: 3;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
 }
 
 .footer_social-list {
-     grid-column-gap: .75rem;
-    grid-row-gap: .75rem;
-    flex-flow: column;
-    display: flex;
-    
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
 }
 
 .footer_social-list a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
-    transition: color 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease, transform 0.2s ease;
 }
 
 .footer_social-list a:hover {
-    color: #ffffff;
-    transform: translateX(4px);
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
 .footer_socials p {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.4);
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
 }
-
-
-/* Responsive (mobile -> stack en 1 columna) */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .under-footer-text-title {
-        grid-column: 1;
-    }
-}
-
 
 .button-icon {
   display: inline-flex;
@@ -152,21 +92,23 @@ footer {
 }
 
 .button-icon:hover {
-  background-color: rgba(0, 0, 0, 0.2); /* or just 'transparent' if you want no bg */
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-.button-label {
-  font-size: 0.875rem;
-  font-weight: 500;
-}
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 
-.button-icon-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  .footer_contact-col,
+  .footer_socials {
+    grid-column: 1;
+  }
 
-.button-icon-box svg {
-  width: 1em;
-  height: 1em;
+  .under-footer-text-title {
+    grid-column: 1;
+    font-size: 2.5rem;
+  }
 }

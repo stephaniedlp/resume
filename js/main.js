@@ -1,66 +1,26 @@
-//
-// Recuperar datos del formulario
-//
+document.addEventListener('DOMContentLoaded', () => {
 
-const contactoForm = document.getElementById('contacto-form');
-
-contactoForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const nombre = document.getElementById("nombre").value;
-  const email = document.getElementById("email").value;
-  const mensaje = document.getElementById("mensaje").value;
-
-  alert('Gracias por contactarnos - Nombre: ' + nombre + '- Email: ' + email + '- Mensaje: ' + mensaje);
-
-  contactoForm.reset();
-});
-
-
-//
-// Evento de boton ir a arriba
-//
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const scrollToBottomButtom = document.getElementById('btn-ir-arriba');
-  
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 100) {
-        scrollToBottomButtom.style.display = 'block';
-      } else {
-        scrollToBottomButtom.style.display = 'none';
-      }
+  // Boton ir arriba
+  const btnIrArriba = document.getElementById('btn-ir-arriba');
+  if (btnIrArriba) {
+    window.addEventListener('scroll', () => {
+      btnIrArriba.style.display = window.scrollY > 100 ? 'block' : 'none';
     });
-  
-    scrollToBottomButtom.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        // behavior: 'smooth'
-      });
+
+    btnIrArriba.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  
+  }
+
+  // Hover text sobre imagenes de galeria
+  document.querySelectorAll('.rounded-grid-link').forEach((link) => {
+    const img = link.querySelector('img');
+    const textSpan = link.querySelector('span');
+    if (!img || !textSpan) return;
+
+    textSpan.style.display = 'none';
+    img.addEventListener('mouseover', () => { textSpan.style.display = 'block'; });
+    img.addEventListener('mouseout', () => { textSpan.style.display = 'none'; });
   });
 
-  document.addEventListener("DOMContentLoaded",function() {
-    var links = document.querySelectorAll(".rounded-grid-link");
-
-    links.forEach(function(link){
-      var img = link.querySelector("img");
-      //Get the <span> element containing the text inside the <a> element
-      var textSpan = link.querySelector("span");
-      //hide text 
-      textSpan.style.display="none";
-
-      //mouseover event listener to the img element
-      img.addEventListener("mouseover",function(){
-        //show text when hover the img
-        textSpan.style.display = "block";
-      });
-      // mouseout event listener to the <img> element
-      img.addEventListener("mouseout", function(){
-        //hide text when mouse leaves the img
-        textSpan.style.display="none";
-      })
-    })
-  })
+});
