@@ -42,16 +42,12 @@ window.R = {
 
   projectCard({ year, name, description, tags, client, link }) {
     const isExternal = link && link.startsWith('http');
-    const footerRight = link
-      ? `<a href="${link}" class="project-link" ${isExternal ? 'target="_blank" rel="noopener"' : ''}>
-           ${isExternal ? 'Live demo →' : 'View project →'}
-         </a>`
+    // When the whole card is a link, avoid nested <a> in footer
+    const footer = link
+      ? `${client ? `<span class="project-client">${client}</span>` : ''}<span class="project-link-hint">${isExternal ? 'Live demo →' : 'View project →'}</span>`
       : `<span class="project-client">${client}</span>`;
-    const footer = client && link
-      ? `<span class="project-client">${client}</span>${footerRight}`
-      : footerRight;
 
-    return `
+    const card = `
       <article class="project-card">
         <div class="project-head">
           <span class="project-year">${year}</span>
@@ -63,6 +59,10 @@ window.R = {
         </div>
         <div class="project-footer">${footer}</div>
       </article>`;
+
+    return link
+      ? `<a class="project-card-link" href="${link}"${isExternal ? ' target="_blank" rel="noopener"' : ''}>${card}</a>`
+      : card;
   },
 
   skillGroup({ title, items }) {

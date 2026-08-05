@@ -99,6 +99,7 @@ window.DATA = {
       description: 'Sales dashboard for videogame records built with Angular 16. Modular architecture split into dashboard, ventas, and autenticacion feature modules. Centralized HTTP layer via a typed DataService returning Observable&lt;Videojuegos[]&gt; streams. Features a live data table (Sale ID, Game Name, Date, Price, Client, Seller), click-to-open detail modal, custom 404 page, and SCSS partials (_variables, flex-layout, modal, table). Deployed to GitHub Pages via angular-cli-ghpages.',
       tags:   ['Angular 16', 'TypeScript 5.1', 'RxJS', 'SCSS', 'Angular Router', 'HttpClient', 'MockAPI', 'Karma + Jasmine', 'GitHub Pages'],
       client: 'University of Sonora',
+      link:   'https://stephaniedlp.github.io/videogames-angular/home',
     },
   ],
 

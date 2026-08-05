@@ -547,6 +547,19 @@ a.menu-link:hover .menu-text.absolute { transform: translate(0, 0); }
   letter-spacing: .04em;
 }
 
+.project-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-link-hint {
+  font-size: var(--text-xs);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--clr-accent);
+}
+
 .project-link {
   font-size: var(--text-xs);
   letter-spacing: .06em;
