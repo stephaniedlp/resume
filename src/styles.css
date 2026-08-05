@@ -382,6 +382,12 @@ a.menu-link:hover .menu-text.absolute { transform: translate(0, 0); }
   letter-spacing: .04em;
 }
 
+.exp-location {
+  font-size: var(--text-xs);
+  color: var(--clr-muted);
+  letter-spacing: .04em;
+}
+
 .exp-role {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 500;
