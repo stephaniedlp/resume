@@ -16,13 +16,13 @@ window.DATA = {
       projectList: [
         { name: 'GEMSO',            desc: 'Full-stack eCommerce & vehicle-financing platform · Mazda, Ford, Lincoln, Changan' },
         { name: 'AgentikSystem',    desc: 'AI / RAG document intelligence platform · Semantic Kernel · Qdrant · OpenAI' },
-        { name: 'Diana',            desc: 'Internal CLI code generator · Roslyn + Scriban · v1 → v4' },
         { name: 'XipePlatform',     desc: 'Azure cloud infrastructure management portal · Resource Manager SDK' },
         { name: 'XipeSAS',          desc: 'Multi-tenant SaaS boilerplate · dual-DB · Diana integration' },
         { name: 'BusinessBox',      desc: 'Business management platform · Azure Blob Storage · MongoDB' },
         { name: 'HISMagazine2',     desc: 'Digital magazine · public reader + admin panel · Blazor WASM' },
         { name: 'CarWashPayStation',desc: 'Self-service POS · Blazor WASM · MVVM pattern' },
         { name: 'AppAgriculture',   desc: 'Cross-platform agricultural app · MAUI + Blazor Hybrid · offline SQLite' },
+        { name: 'Diana',            desc: 'Internal CLI code generator · Roslyn + Scriban · v1 → v4' }
       ],
       bullets: [
         'Designed, developed, tested, and maintained enterprise software applications using C#/.NET, SQL, Blazor, and ASP.NET Core across customer-facing and internal business platforms.',
@@ -52,39 +52,32 @@ window.DATA = {
   // ─── Featured Projects ───────────────────────────────────────────
   projects: [
     {
-      year:        '2024 – 2026',
+      year:        '2025 - 2026',
       name:        'GEMSO — Mazda, Ford, Lincoln, Changan',
       description: 'Full-stack eCommerce & vehicle-financing platform for major automotive brands. REST API on clean architecture (Domain / Application / Infrastructure), Blazor WebAssembly back-office with MudBlazor, and a cross-platform .NET MAUI 10 mobile app for iOS & Android. JWT auth, AWS S3 image storage, Firebase push notifications, TickerQ job scheduler, Refit HTTP clients, and Polly resilience layer.',
       tags:   ['.NET 8', 'ASP.NET Core', 'Blazor WASM', 'MAUI', 'SQL Server', 'EF Core', 'AWS S3', 'Firebase', 'Refit', 'Polly', 'MudBlazor'],
       client: 'Xipe Technology',
     },
     {
-      year:        '2024 – 2026',
-      name:        'XipeSAS — Multi-Tenant SaaS Boilerplate',
-      description: 'Production-ready SaaS boilerplate platform built from scratch as two tightly integrated systems. The backend (BoilerPlate.Web) delivers multi-tenant architecture, JWT + Cookie hybrid auth, a generic expression-tree-based data access layer (soft delete, cascade ops, dynamic LINQ), dual SQL Server / MongoDB support via a shared IDbService interface, SendGrid email, and Swagger docs — all wired through the Decorator pattern across domain services (User, Tenant, Invoice, Payment, Referral). Paired with Diana, a custom CLI code generation engine: uses Roslyn (Microsoft.CodeAnalysis.CSharp) to statically analyse C# entity classes and drive a 9-stage pipeline (DTOs → Services → Controllers → Blazor Pages) via Scriban templates, with file-watch mode for real-time incremental regeneration. Clean Architecture across Domain, Web, and Tests projects; Decorator, Pipeline, Template Method, and Singleton patterns throughout.',
-      tags:   ['.NET 8', 'ASP.NET Core', 'EF Core', 'SQL Server', 'MongoDB', 'Roslyn', 'Scriban', 'JWT', 'Blazor', 'SendGrid', 'Multi-Tenant', 'Clean Architecture'],
-      client: 'Xipe Technology',
-    },
-    {
-      year:        '2024 – 2026',
-      name:        'Diana — CLI Code Generator',
-      description: 'Internal developer productivity tool that generates .NET boilerplate code using Roslyn (Microsoft.CodeAnalysis.CSharp) and Scriban templates. Statically analyses C# entity classes to extract properties, relationships, constructors, and inheritance — then orchestrates a 9-stage generation pipeline (DTOs → InputDTOs → Extensions → Service Interfaces → Services → Decorators → Controllers → ViewModels → Blazor Pages) in strict dependency order. File-watch mode triggers incremental regeneration automatically on entity changes. Rich terminal UI via Spectre.Console with progress indicators and per-entity generation reports. Evolved through v1 → v4 and integrated into multiple production platforms.',
-      tags:   ['Roslyn', 'Scriban', 'Spectre.Console', '.NET 8 CLI', 'C#', 'Code Generation', 'Developer Tooling'],
-      client: 'Xipe Technology',
-    },
-    {
-      year:        '2024 – 2026',
-      name:        'XipePlatform — Azure Cloud Manager',
-      description: 'SaaS portal for managing Azure cloud infrastructure programmatically. Provisions and manages App Services, SQL databases, and compute resources via Azure Resource Manager SDK. Built with Blazor Server and MudBlazor for the admin UI, ASP.NET Core Identity for auth, and SendGrid for transactional email.',
-      tags:   ['ASP.NET Core 8', 'Blazor Server', 'Azure Resource Manager', 'Azure SDK', 'MudBlazor', 'EF Core', 'SendGrid', 'Identity'],
-      client: 'Xipe Technology',
-    },
-    {
-      year:        '2025 – 2026',
+      year:        '2025-2026',
       name:        'AgentikSystem — AI Document Platform',
       description: 'Intelligent document management system with RAG (Retrieval-Augmented Generation). Users upload documents which are parsed, embedded with text-embedding-3-large, and stored in Qdrant vector DB. The system answers questions about documents using GPT via Semantic Kernel. Includes JWT + Cookie auth, PDF parsing with PdfPig, and full MSTest test coverage.',
       tags:   ['Semantic Kernel', 'KernelMemory', 'OpenAI API', 'Qdrant', 'ASP.NET Core 8', 'EF Core 9', 'SQL Server', 'MongoDB', 'JWT', 'MSTest'],
       client: 'Personal Project',
+    },
+    {
+      year:        '2026',
+      name:        'Diana — CLI Code Generator',
+      description: 'Internal developer productivity tool that generates .NET boilerplate code using Roslyn (Microsoft.CodeAnalysis.CSharp) and Scriban templates. Reads project structure and scaffolds controllers, services, domain models, and more following clean architecture conventions. Rich terminal UI via Spectre.Console. Evolved through v1 → v4 and integrated into multiple production platforms.',
+      tags:   ['Roslyn', 'Scriban', 'Spectre.Console', '.NET 8 CLI', 'C#', 'Code Generation', 'Developer Tooling'],
+      client: 'Xipe Technology',
+    },
+    {
+      year:        '2026',
+      name:        'XipePlatform — Azure Cloud Manager',
+      description: 'SaaS portal for managing Azure cloud infrastructure programmatically. Provisions and manages App Services, SQL databases, and compute resources via Azure Resource Manager SDK. Built with Blazor Server and MudBlazor for the admin UI, ASP.NET Core Identity for auth, and SendGrid for transactional email.',
+      tags:   ['ASP.NET Core 8', 'Blazor Server', 'Azure Resource Manager', 'Azure SDK', 'MudBlazor', 'EF Core', 'SendGrid', 'Identity'],
+      client: 'Xipe Technology',
     },
     {
       year:        '2024',
@@ -157,9 +150,17 @@ window.DATA = {
       items: [
         { src: '/img/playa/pi1.jpg',  caption: 'Punta Mita, Nayarit' },
         { src: '/img/playa/pi2.jpg',  caption: 'Punta Mita, Nayarit' },
-        { src: '/img/playa/pi4.jpg',  caption: 'Puerto Escondido, Oaxaca' },
-        { src: '/img/playa/pi8.jpg',  caption: 'Punta Mita, Nayarit' },
-        { src: '/img/playa/p16.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+        { src: '/img/playa/pi4.jpg',  caption: 'Punta Mita, Nayarit' },
+        { src: '/img/playa/pi5.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+        { src: '/img/playa/pi6.jpg',  caption: 'Punta Mita, Nayarit' },
+         { src: '/img/playa/pi7.jpg',  caption: 'Punta Mita, Nayarit' },
+         { src: '/img/playa/pi8.jpg',  caption: 'Punta Mita, Nayarit' },
+          { src: '/img/playa/pi9.jpg',  caption: 'Punta Mita, Nayarit' },
+        { src: '/img/playa/pi10.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+           { src: '/img/playa/pi11.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+              { src: '/img/playa/pi12.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+                 { src: '/img/playa/pi13.jpg',  caption: 'Puerto Escondido, Oaxaca' },
+                    { src: '/img/playa/pi14.jpg',  caption: 'Puerto Escondido, Oaxaca' },
       ],
     },
     {
